@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Web</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet"  href="../css/general.css" />
+		<link rel="stylesheet"  href="../css/contacto.css" />
+	</head>
+	<body>
+		<article>
+			<h3>Ponerme en contacto</h3>
+			<p>
+				Si deseas ponerte en contacto con los desarrolladores de la p&aacute;gina hay dos formas de hacerlo
+				Puedes mandarnos un <a href="mailto:correodequiensea@whatever.net?subject=Contacto">correo</a>
+				o bien puedes rellenar el siguiente formulario:
+			</p>
+			<form id="contacto">
+				<fieldset>
+				<fieldset>
+					<legend>Datos personales</legend>
+					Nombre:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="nombre" value="Mi nombre" required/><br />
+					Apellidos:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="apellidos" value="Mis apellidos" required/><br />
+					Direcci&oacute;n de contacto: <input type="text" name="correo" value="Mi correo electr&oacute;nico" required/> <br/>
+				</fieldset>
+				<fieldset>
+					<legend>Mensaje</legend>
+					<br/>
+					Departamento objetivo:
+					<select form="contacto" required size="4">
+						<option value="idiomas">Departamento de idiomas</option>
+						<option value="videos">Departamento multimedia</option>
+						<option value="visuales">Departamento de dise&ntilde;o</option>
+						<option value="desarrollo" selected>Departamento web</option>
+					</select><br /><br />
+					Asunto de consulta <input type="text" name="asunto" value="Asunto" required /><br />
+
+					Motivo de consulta:<br />
+					
+					<textarea name="motivo" rows="7" cols="100" placeholder="Explica el motivo del contacto. Puedes subir capturas de pantallas o un archivo comprimido en archivos de importancia"></textarea><br/>
+					
+					
+				
+				</fieldset>
+				
+				Archivos de importancia: <input type="file" name="pic" accept="image/*, .zip">
+				<br/>
+				<br/>
+				<p id="indicacion">Todos los campos salvo la subida son obligatorios</p>
+				<input type="submit" />
+				<input type="reset">
+				</fieldset>
+			</form>
+			<br/>
+		</article>
+	</body>
+</html>

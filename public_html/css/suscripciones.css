@@ -1,0 +1,5 @@
+fieldset *, input {margin-left:3em;}
+fieldset {width: 60%;}
+.tab {margin-left:6em;}
+.notab {margin-left:0em;}
+h1, legend {text-align:center;}

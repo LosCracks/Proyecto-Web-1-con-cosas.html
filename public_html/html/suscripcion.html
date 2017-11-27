@@ -1,0 +1,187 @@
+<html>
+	<head>
+		<title>Web</title>
+        <link rel='stylesheet' type='text/css' href='../css/general.css' />
+		<link rel='stylesheet' type='text/css' href='../css/suscripciones.css' />
+        <meta charset="UTF-8">
+	</head>
+	<body>
+		<center><h1>SUSCRIPCION</h1></center>
+		<br/><br/>
+		<form action= "#" method= "post">
+		<fieldset>
+		<div>
+		<label for="nombre">Nombre</label>
+		<br/>
+		<input type= "text" name= "nombre" id= "nombre" size= "30"/>
+		</div>
+		<div>
+		<br/>
+		<label for="apellidos">Apellidos</label>
+		<br/>
+		<input type= "text" name= "apellidos" id= "apellidos"/>
+		</div>
+		<div>
+		<br/>
+		<label for="dni">DNI</label>
+		<br/>
+		<input type= "text" name= "dni" id= "dni"/>
+		</div>
+		<div>
+		<br/><br/>
+		<p>Fecha de Nacimiento</p>
+		<label for= "dia">Dia  - -  </label><label for= "mes">Mes  - -  </label><label for= "anio">Anio  </label>
+		<br/>
+		<select id= "dia" size="1">
+		<option>1</option>
+		<option>2</option>
+		<option>3</option>
+		<option>4</option>
+		<option>5</option>
+		<option>6</option>
+		<option>7</option>
+		<option>8</option>
+		<option>9</option>
+		<option>10</option>
+		<option>11</option>
+		<option>12</option>
+		<option>13</option>
+		<option>14</option>
+		<option>15</option>
+		<option>16</option>
+		<option>17</option>
+		<option>18</option>
+		<option>19</option>
+		<option>20</option>
+		<option>21</option>
+		<option>22</option>
+		<option>23</option>
+		<option>24</option>
+		<option>25</option>
+		<option>26</option>
+		<option>27</option>
+		<option>28</option>
+		<option>29</option>
+		<option>30</option>
+		</select>
+		<select id= "mes" size="1">
+		<option>1</option>
+		<option>2</option>
+		<option>3</option>
+		<option>4</option>
+		<option>5</option>
+		<option>6</option>
+		<option>7</option>
+		<option>8</option>
+		<option>9</option>
+		<option>10</option>
+		<option>11</option>
+		<option>12</option>
+		</select>
+		<select id= "anio" size="1">
+		<option> 2017</option>
+		<option> 2016</option>
+		<option> 2015</option>
+		<option> 2014</option>
+		<option> 2013</option>
+		<option> 2012</option>
+		<option> 2011</option>
+		<option> 2010</option>
+		<option> 2009</option>
+		<option> 2008</option>
+		<option> 2007</option>
+		<option> 2006</option>
+		<option> 2005</option>
+		<option> 2004</option>
+		<option> 2003</option>
+		<option> 2002</option>
+		<option> 2001</option>
+		<option> 2000</option>
+		</select>
+		</div>
+		<div>
+		<br/>
+		<label for="provincia">Provincia</label>
+		<br/>
+		<input type= "text" name= "provincia" id= "provincia"/>
+		</div>
+		<div>
+		<br/>
+		<label for="localidad">Localidad</label>
+		<br/>
+		<input type= "text" name= "localidad" id= "localidad"/>
+		</div>
+		</fieldset>
+		<br/>
+		<fieldset legend="datos curso">
+		<div>
+		<br/><br/>
+		<label>Meses de suscripcion</label>
+		<br/>
+		<input type= "radio" name= "meses" id="3meses" class = "meses" checked="checked"/>
+		<label for="3meses" class = "notab">3 Meses</label>
+		<br/>
+		<input type= "radio" name= "meses" id="6meses" class = "meses"/>
+		<label for ="6meses" class = "notab">6 Meses</label>
+		<br/>
+		<input type= "radio" name= "meses" id="12meses" class = "meses"/>
+		<label for = "12meses" class = "notab">12 Meses</label>
+		</div>
+		<div>
+		<br/><br/>
+		<label for= "nivel">Nivel</label>
+		<br/>
+		<select id= "nivel" size="1">
+		<option> Basico</option>
+		<option>Intermedio</option>
+		<option>Avanzado</option>
+		</select>
+		</div>
+		<div>
+		<div>
+		<br/><br/>
+		<label>Metodo de pago</label>
+		<br/>
+		<input for ="notab" type= "radio" name= "pago" id="pago1" class="pago" checked="checked"/>
+		<label class = "notab">Efectivo</label>
+		<br/>
+		<input type= "radio" name= "pago" id="pago2" class="pago"/>
+		<label class = "notab">Transferencia bancaria</label>
+		<br/>
+		<input type= "radio" name= "pago" id="pago3" class="pago"/>
+		<label class = "notab">Cheque</label>
+		</div>
+		</fieldset>
+		<input type= "checkbox" checked="checked"/>
+		<label>Suscribirse al boletin de novedades</label>
+		<br/><br/>
+		<input type="button" value="Guardar cambios"/>
+		<input type="reset" value="Borrar los datos introducidos"/>
+		</form>
+		<button onclick="devolverLocalizacion()">Where am I?!</button>
+
+		<p id="mostrarResultado"></p>
+		<script>
+			var resultado = document.getElementById("mostrarResultado");
+
+			function devolverLocalizacion() {
+				if (navigator.geolocation) {
+					navigator.geolocation.getCurrentPosition(mostrarPosicion);
+				} else { 
+					resultado.innerHTML = "Tu navegador no soporta la geolocalizacion.";
+				}
+			}
+
+			function mostrarPosicion(posicion) {
+				if (posicion.coords.latitude > 36 && posicion.coords.latitude < 42 && posicion.coords.longitude > -8 && posicion.coords.longitude < 0){
+					resultado.innerHTML = "Tus coordenadas son: " + posicion.coords.latitude + 
+					", " + posicion.coords.longitude + " con una precision de: "+ posicion.coords.accuracy + " metros. Por lo que debes de ser espanol!<br>";
+				} else {
+					resultado.innerHTML = "Tus coordenadas son: " + posicion.coords.latitude + 
+					", " + posicion.coords.longitude + " con una precision de: "+ posicion.coords.accuracy + " metros. Por lo que debes de ser de fuera de Espana.";
+				}
+			}
+		</script>
+		<br/><br/><br/>
+	</body>
+</html>

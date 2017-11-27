@@ -1,0 +1,48 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+}
+
+.list-menu li {
+    float: left;
+}
+
+.list-menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+.list-menu li a:hover {
+    background-color: #111111;
+}
+
+.list-menu ul{
+ margin:0;
+ padding:0;
+ list-style:none;
+ height:0;
+ overflow: hidden;
+ transition:1s;
+ -moz-transition:1s;
+ -webkit-transition:1s;
+}
+ 
+.list-menu li ul{
+ transition:1s;
+ -moz-transition:1s;
+ -webkit-transition:1s;
+}
+ 
+.list-menu li ul li{
+}
+ 
+.list-menu li:hover ul{
+ height: 40px;
+ background:rgba(108,151,176,0.5);
+}

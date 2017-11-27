@@ -1,0 +1,17 @@
+body {background-color: #333333; font:Comic Sans; color:#FFFFFF}
+h1, h2, h3 {font: verdana;}
+p {font:Comic Sans; font-size: medium;}
+
+a
+{
+	text-decoration: none;
+}
+
+a:visited {
+    color: orange;
+}
+
+a:hover
+{
+	text-decoration: underline;
+}

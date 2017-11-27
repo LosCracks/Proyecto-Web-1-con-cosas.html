@@ -1,0 +1,41 @@
+p
+{
+	text-align:justify;
+	text-indent: 10px;
+	margin-left: 100px;
+	margin-top: 3%;
+	margin-right: 80px;
+	word-spacing: 5px;
+}
+
+ul
+{
+	list-style-image: url(../imagenes/tribal.png);
+	margin-left: 130px;
+}
+
+li
+{
+	margin-bottom: 30px;
+}
+
+#primero:first-letter {
+  font-size: 2.5em;
+  font-weight: bold;
+  line-height: .9em;
+  float: left;
+  margin: .1em;
+}
+
+h1
+{
+	transform: rotate(270deg);
+	transform-origin: left top 0;
+	position:absolute;
+	top:100%;
+	left:20px;
+	word-spacing: 15px;
+	letter-spacing: 5px;
+	text-decoration:overline;
+	font-size: 20px;
+}
